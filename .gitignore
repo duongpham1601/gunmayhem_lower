@@ -1,3 +1,6 @@
-.vscode
-out/*
-assets/
+/*.png
+/assets/
+/out/
+/.vscode/
+/tilted/*
+!/tilted/map1.json

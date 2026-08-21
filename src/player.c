@@ -9,7 +9,7 @@ typedef struct {
 
 Position position = {0, 0};
 
-static void quit() {
+static void cleanup() {
 
 };
 
@@ -45,11 +45,11 @@ static void render(SDL_Renderer* renderer) {
 
 Entity init_player(SDL_Renderer* renderer) {
 
-    const char path[] = "./assets/AllCatsDemo/Classical/IdleCat.png";
+    const char path[] = "./assets/cat/AllCatsDemo/Classical/IdleCat.png";
     player_texture = IMG_LoadTexture(renderer, path);
 
     Entity player = {
-        .quit = quit, 
+        .cleanup = cleanup,
         .handle_events = handle_events,
         .update = update,
         .render = render
